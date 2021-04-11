@@ -6,4 +6,3 @@
 
 ## Documentation
 - [PythonShell](https://www.npmjs.com/package/python-shell)
-- 
