@@ -14,10 +14,18 @@ app.get('/:firstname/:lastname', (req, res) => {
         firstname,
         lastname
     ])
+    
+    // This line will encode your output result from python to standard utf8
+    // which means it will be type string
+    process.stdout.setEncoding('utf8')
 
     process.stdout.on('data', (data) => {
+        // this will show you 
+        console.log(typeof(data))
+
         console.log(data.toString())
 
+        // Change to res.render
         res.send(data.toString())
     })
 })
